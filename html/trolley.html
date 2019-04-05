@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shopping trolley</title>
+    <link href="../css/trolley.css" type="text/css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+
+</head>
+<body>
+      <div id="top">
+        <div id="div1">
+          <ul id="ul1">
+              <li class="li1"><a href="#">购物车</a></li>
+              <li class="li1"><a href="#">我的订单</a></li>
+              <li class="li1"><a href="#">我的云书房</a></li>
+              <li class="li1"><a href="#">我的当当</a></li>
+              <li class="li1"><a href="#">小说投稿</a></li>
+              <li class="li1"><a href="#">我要出书</a></li>
+              <li class="li1"><a href="#">企业采购</a></li>
+              <li class="li1"><a href="#">客户服务</a></li>
+              <li class="li1"><a href="#">我要出书</a></li>
+           </ul>
+         </div>
+          <div>
+              <a href="http://fashion.dangdang.com/20180903_qsxindex"><img src="../imges/2018091118183443973.jpg" height="60" width="960" id="img1"/></a>
+          </div>
+          <div>
+              <img src="../imges/dd_logo.jpg" height="49" width="250" id="img2"/>
+              <div id="div2">我的购物车</div>
+              <div class="div1">填写订单</div>
+              <div class="div1">完成订单</div>
+          </div>
+          <div id="div3"></div>
+      </div>
+
+      <div id="bottom">
+               <div>
+                 <input type="checkbox" id="input1" class="check_1" onclick="check()">
+                   <ul id="ul2">
+                      <li class="li2" id="quanxuan">全选</li>
+                       <li class="li2">商品信息</li>
+                       <li class="li2">单位（元）</li>
+                       <li class="li2">数量</li>
+                       <li class="li2">金额（元）</li>
+                       <li class="li2">操作</li>
+                  </ul>
+               </div>
+               <div id="div4">
+                    <input type="checkbox" id="input2" class="check_1" onclick="check()">
+                    <img src="../imges/book111.jpg" height="120" width="120" id="img_trolley"/>
+                    <ul id="ul3">
+                        <li class="li3" id="bookname">六度人脉</li>
+                        <li class="li3">比加入购物车时降低1.00元</li>
+                        <li class="li3">购买此商品,可享促销</li>
+                    </ul>
+                   <div id="price">
+                       <p class="price" id="bookprice">¥8.9</p>
+                       <del class="price">¥15.8</del>
+                   </div>
+                   <div id="mount">
+                       <input type="button" value="+" class="addminus" onclick="fn()">
+                       <span id="mount1">1</span>件
+                       <input type="button" value="-" class="addminus">
+                       单价：<span id="price1">8.9</span>元
+                       小计：<span id="totalprice">8.9</span>元
+                       <span style="margin-left: 100px" id="shanchu"><a href="#" style="text-decoration: none;color: grey">删除</a></span>
+
+                    <script>
+                           $("#shanchu").on('click',function warning()
+                           {
+
+                                   var c=confirm("确定要删除吗");
+                                   if (c==true)
+                                   {
+                                       $("#div4").empty();
+                                       return true;
+
+                                   } else
+                                       {
+                                       return false;
+                                       }
+                           })
+
+
+                       </script>
+                       <script>
+                        $(".addminus:first").on('click',function(){
+
+                               $('#mount1').html("2");
+                               $("#totalprice").html("17.8");
+                            $("#pricetotal").html("17.8");
+                           });
+                           $(".addminus:last").on('click',function(){
+
+                               $('#mount1').html("1");
+                               $("#totalprice").html("8.9");
+                               $("#price1").html("8.9");
+                               $("#pricetotal").html("8.9");
+                           });
+
+                         /*
+                         function fn() {
+
+                             var pricevalue = document.getElementById("mount1");
+                             var i=pricevalue.value;
+
+                                 pricevalue.innerHTML = i+"1";
+
+                         }*/
+                         function fn2()
+                        {
+                             confirm("确认结算？")
+                        }
+                        function check()
+                        {
+                            var flag=document.getElementsByClassName(".check_1").checked;
+                            var check=document.getElementsByClassName(".check_1");
+
+
+                            if(flag){
+                                for (var m = 0; m < check.length; m++) {
+                                    check[m].checked = true;
+                                }
+                            }
+                            else
+                                {
+                                    for (var n = 0; n < check.length; n++) {
+
+                                        check[n].checked = false;
+
+                                    }
+                                }
+
+                        }
+                       </script>
+
+                   </div>
+               </div>
+
+                       <div id="check-js">
+                       <input type="checkbox" class="check_1" onclick="check()">全选
+                           <span id="deleteall">批量删除 总计<span id="pricetotal">8.9</span>元</span>
+                       <input type="button" value="结算" id="jiesuan" onclick="fn2()" >
+      </div>
+</body>
+</html>

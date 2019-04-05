@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#img1{
+    position: absolute;
+    margin-left: 200px;
+}
+#img2{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    margin-left: 200px;
+    margin-top: 150px;
+}
+#right{
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 100px;
+    border: 2px solid #f5f5f5;
+    width: 500px;
+    height: 500px;
+}
+#li1,#li2{
+    list-style: none;
+   display: inline-block;
+    width: 250px;
+    height: 100px;
+    border: 1px solid red;
+     text-align: center;
+     line-height: 100px;
+}
+ #form1,#form2{
+     margin-left: 100px;
+     margin-top: 180px;
+ }
+ .login-content-input{
+     width: 350px;
+     height: 30px;
+     border:1px solid red;
+     margin-top: 20px;
+ }
+ .login-btn-out{
+     width: 350px;
+     height: 30px;
+     border:1px solid red;
+     background-color: red;
+     margin-top: 50px;
+ }
+#邮箱登录,#账号登录{
+    display: none;
+
+}
+#账号登录{
+    display: block;
+}
+#li1{
+    position: absolute;
+    background-color: red;
+}
+#li2{
+    position: absolute;
+    margin-left: 250px;
+}
+#bottom{
+  position: absolute;
+    margin-top: 700px;
+    margin-left: 300px;
+}
+.footernav{
+    float: left;
+    list-style: none;
+    padding-left: 50px;
+    padding-right: 30px;
+    border-right: 2px solid lightgray;
+    font-size: 10px;
+    font-weight: lighter;
+}
+.footernav>a{
+    text-decoration: none;
+    color: black;
+}
+.footernav>a:hover{
+     color: red;
+    font-size: 20px;
+}
+#span2{
+    border-right: 2px solid lightgray;
+    font-size: 10px;
+    font-weight: lighter;
+    margin-left: 350px;
+}

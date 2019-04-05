@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+    <link href="../css/login.css" type="text/css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
+    <script type="text/javascript">
+           function showDiv(n)
+           {
+               var obj1=document.getElementById("li"+n);
+               var obj11=document.getElementById("li1");
+               var obj12=document.getElementById("li2");
+               var obj2=document.getElementById("账号登录");
+               var obj3=document.getElementById("邮箱登录");
+               if(n==1)
+               {
+                   obj2.style.display="block";
+                   obj3.style.display="none";
+                   obj11.style.backgroundColor="red";
+                   obj12.style.backgroundColor="white";
+               }else{
+                   obj2.style.display="none";
+                   obj3.style.display="block";
+                   obj11.style.backgroundColor="white";
+                   obj12.style.backgroundColor="red";
+               }
+           }
+
+
+
+    </script>
+    <script type="text/javascript" src="../js/md5hxf.js">
+        //var password=document.getElementById("pwd1").val();
+        var password = $("#pwd1").val();
+        //加密成md5
+        var passwd = $.hex_md5(password);
+    </script>
+
+</head>
+<body>
+   <div id="left">
+         <img src="../imges/logo.png" id="img1">
+         <a href="http://fashion.dangdang.com/20180903_qsxindex">
+           <img src="../imges/logodown.png" id="img2"></a>
+   </div>
+   <div id="right">
+       <ul>
+           <li  class="li" id="li1" onmouseover="showDiv(1)">账号登录</li>
+           <li  class="li" id="li2" onmouseover="showDiv(2)">邮箱登录</li>
+       </ul>
+       <div id="账号登录">
+       <form method="post" id="form1" action="#">
+             <dl class="login-content">
+                 <dt>账号：</dt>
+                 <dd><input id="number" type="text" class="login-content-input" name="id"></dd>
+             </dl>
+             <dl class="login-content">
+                 <dt>密码：</dt>
+                 <dd><input id="pwd1" type="password" class="login-content-input" name="pass"></dd>
+             </dl>
+             <dl class="login-content">
+                 <dt></dt>
+                 <dd><input id="btn1"  value="提交" type="submit" class="login-btn-out" onclick="fn1()"></dd>
+             </dl>
+       </form>
+       </div>
+       <div id="邮箱登录">
+           <form action="" method="post" id="form2">
+               <dl class="login-content">
+                   <dt>邮箱：</dt>
+                   <dd><input id="email" type="text" class="login-content-input" name="id"></dd>
+               </dl>
+               <dl class="login-content">
+                   <dt>密码：</dt>
+                   <dd><input id="pwd2" type="password" class="login-content-input"  name="pass"></dd>
+               </dl>
+               <dl class="login-content">
+                   <dt></dt>
+                   <dd><input id="btn2"  value="提交" type="submit" class="login-btn-out" onclick="fn1()"></dd>
+               </dl>
+           </form>
+       </div>
+   </div>
+   <div id="bottom">
+        <ul>
+            <li class="footernav"><a href="#">公司简介</a></li>
+            <li class="footernav"><a href="#">诚聘英才</a></li>
+            <li class="footernav"><a href="#">手机当当</a></li>
+            <li class="footernav"><a href="#">网站联盟</a></li>
+            <li class="footernav"><a href="#">当当招商</a></li>
+            <li class="footernav"><a href="#">机构销售</a></li>
+            <li class="footernav"><a href="#">官方Blog</a></li>
+
+        </ul>
+       <span id="span2">Copyright (C) 当当网 2004-2017, All Rights Reserved</span>
+   </div>
+    <script type="text/javascript" src="../js/login.js"></script>
+
+</body>
+</html>
